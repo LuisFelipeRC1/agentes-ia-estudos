@@ -1,0 +1,41 @@
+# Ambiente virtual Python
+venv/
+.venv/
+env/
+.env
+
+# Variáveis de ambiente reais (nunca versionar!)
+.env
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Dados locais e índices FAISS
+dados/indice_faiss/
+*.faiss
+*.pkl
+
+# Logs
+*.log
+
+# Arquivos de cobertura de testes
+.coverage
+htmlcov/
+.pytest_cache/

@@ -1,0 +1,59 @@
+Inteligência Artificial e Agentes de IA
+
+Inteligência Artificial (IA) é a área da ciência da computação dedicada ao desenvolvimento de sistemas capazes de realizar tarefas que normalmente requerem inteligência humana, como reconhecimento de padrões, tomada de decisões e compreensão da linguagem natural.
+
+Modelos de Linguagem Grandes (LLMs)
+
+Os LLMs (Large Language Models) são modelos de IA treinados em enormes quantidades de texto para compreender e gerar linguagem natural. Exemplos populares incluem:
+- GPT-4o e GPT-4o-mini (OpenAI)
+- Gemini 1.5 Pro e Flash (Google)
+- Claude 3.5 Sonnet (Anthropic)
+- Llama 3 (Meta)
+
+Esses modelos são treinados com a técnica de aprendizado não supervisionado chamada pré-treinamento, onde o modelo aprende a prever a próxima palavra em um texto. Após o pré-treinamento, passam por um processo de ajuste fino (fine-tuning) com feedback humano (RLHF) para alinhar o comportamento do modelo com as intenções do usuário.
+
+Padrão ReAct (Reasoning + Acting)
+
+O padrão ReAct é uma arquitetura para agentes de IA que combina raciocínio em linguagem natural com execução de ações. O ciclo funciona assim:
+
+1. Thought (Pensamento): o agente analisa a situação e decide o que fazer.
+2. Action (Ação): o agente escolhe e executa uma ferramenta.
+3. Observation (Observação): o agente analisa o resultado da ferramenta.
+4. O ciclo repete até o agente ter informação suficiente para responder.
+5. Final Answer (Resposta Final): o agente formula a resposta para o usuário.
+
+RAG (Retrieval-Augmented Generation)
+
+RAG é uma técnica que combina busca semântica com geração de texto. O pipeline funciona em duas etapas:
+
+Etapa 1 - Indexação:
+- Carregar documentos
+- Dividir em trechos menores (chunks)
+- Gerar embeddings (representações vetoriais)
+- Armazenar em banco vetorial (ex: FAISS, Pinecone, Chroma)
+
+Etapa 2 - Consulta:
+- Converter a pergunta em embedding
+- Buscar trechos similares no banco vetorial
+- Injetar trechos no prompt como contexto
+- LLM gera resposta baseada no contexto
+
+Frameworks de IA: LangChain e LlamaIndex
+
+LangChain é um framework Python para construir aplicações com LLMs. Oferece:
+- Abstração para múltiplos provedores de LLM
+- Ferramentas para construção de agentes
+- Componentes para RAG (document loaders, text splitters, vector stores)
+- Memória para manter contexto em conversas
+
+LlamaIndex é outro framework focado especialmente em RAG, com conectores para diversas fontes de dados e estratégias avançadas de indexação e recuperação.
+
+Prompt Engineering
+
+Prompt engineering é a disciplina de projetar e otimizar instruções para LLMs. Técnicas importantes:
+
+- Zero-shot: instrução direta sem exemplos
+- Few-shot: instrução com exemplos de entrada/saída
+- Chain-of-thought: instrução para o modelo "pensar em voz alta"
+- System prompt: instrução global de comportamento do assistente
+- Role prompting: atribuir um papel específico ao modelo
